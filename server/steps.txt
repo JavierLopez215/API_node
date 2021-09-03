@@ -1,0 +1,22 @@
+npm i express morgan promise-mysql cors
+
+npm install -g typescript
+
+tsc --init
+
+en el tsconfig cambiamos el target por es6
+
+descomentamos "outDir" : "./build"
+
+en el apartado scripts de package.json colocamos 
+"build": "tsc -w"
+
+npm install @types/express -D
+npm install @types/morgan @types/cors -D
+
+
+correr servicio de tsc para transformar .ts en .js
+npm run build
+
+correr servidor node nodemon build/index.js
+nodemon build/index.js
